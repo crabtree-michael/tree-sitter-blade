@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "TreeSitterBlade",
-    platforms: [.macOS(.v10_13), .iOS(.v11)],
+    platforms: [.macOS(.v10_13), .iOS(.v12)],
     products: [
         .library(name: "TreeSitterBlade", targets: ["TreeSitterBlade"]),
     ],
@@ -28,8 +28,7 @@ let package = Package(
                     // any additional files to exclude 
                 ],
                 sources: [
-                    "src/parser.c",
-                    "src/scanner.cc", // this might be `scanner.c` or not present at all
+                    "src/parser.c"
                 ],
                 resources: [
                     .copy("queries")
